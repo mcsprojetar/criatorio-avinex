@@ -1,11 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
-# Onde as fotos enviadas pelo painel são guardadas
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
+  identity_url: https://criatorio-avinex.netlify.app/.netlify/identity
+  gateway_url: https://criatorio-avinex.netlify.app/.netlify/git
 locale: "pt"
 
 collections:
