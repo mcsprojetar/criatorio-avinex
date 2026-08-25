@@ -1,0 +1,14 @@
+{
+  "nome_do_criatorio": "Criatório Avinex",
+  "whatsapp_numero": "5575991869145",
+  "whatsapp_exibicao": "(75) 99186-9145",
+  "instagram_usuario": "@criatorioavinex",
+  "instagram_url": "https://instagram.com/criatorioavinex",
+  "texto_sobre": "O Criatório Avinex se dedica à criação responsável de codornas e aves selecionadas, com atenção à alimentação, higiene e manejo do plantel. Cada lote de ovos é selecionado com cuidado antes do envio, buscando sempre a satisfação de quem compra.",
+  "formas_de_envio": [
+    { "nome": "Correios", "ativo": true, "obs": "Consulte disponibilidade para sua região." },
+    { "nome": "Carro de linha", "ativo": true, "obs": "Disponível para algumas rotas — consulte." },
+    { "nome": "Transportadora", "ativo": true, "obs": "Sob consulta." },
+    { "nome": "Retirada no local", "ativo": true, "obs": "Combine data e horário pelo WhatsApp." }
+  ]
+}
