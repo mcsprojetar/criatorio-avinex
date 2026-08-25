@@ -1,8 +1,11 @@
 backend:
   name: git-gateway
   branch: main
-  identity_url: https://criatorio-avinex.netlify.app/.netlify/identity
-  gateway_url: https://criatorio-avinex.netlify.app/.netlify/git"
+  identity_url: https://auth.decapbridge.com/sites/COLE-SEU-ID-AQUI
+  gateway_url: https://gateway.decapbridge.com
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "produtos"
