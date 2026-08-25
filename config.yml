@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Onde as fotos enviadas pelo painel são guardadas
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "pt"
+
+collections:
+  - name: "produtos"
+    label: "Produtos"
+    files:
+      - name: "lista_produtos"
+        label: "Lista de Produtos"
+        file: "data/produtos.json"
+        fields:
+          - label: "Produtos"
+            name: "produtos"
+            widget: "list"
+            summary: "{{fields.nome}} — {{fields.categoria}}"
+            fields:
+              - { label: "ID interno (sem espaços/acentos)", name: "id", widget: "string" }
+              - { label: "Nome do produto", name: "nome", widget: "string" }
+              - { label: "Categoria", name: "categoria", widget: "string" }
+              - { label: "Preço (deixe 0 para 'Consulte o valor')", name: "preco", widget: "number", default: 0, value_type: "float" }
+              - { label: "Unidade (ex: dúzia, unidade, casal)", name: "unidade", widget: "string", default: "unidade" }
+              - { label: "Foto", name: "imagem", widget: "image", required: false }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Disponível para venda", name: "disponivel", widget: "boolean", default: true }
+
+  - name: "configuracoes"
+    label: "Configurações do site"
+    files:
+      - name: "dados_negocio"
+        label: "Dados do negócio"
+        file: "data/config.json"
+        fields:
+          - { label: "Nome do criatório", name: "nome_do_criatorio", widget: "string" }
+          - { label: "WhatsApp — apenas números, com DDI e DDD", name: "whatsapp_numero", widget: "string", hint: "Exemplo: 5575991869145 (55 = Brasil, 75 = DDD)" }
+          - { label: "WhatsApp — como aparece no site", name: "whatsapp_exibicao", widget: "string" }
+          - { label: "Instagram — usuário", name: "instagram_usuario", widget: "string" }
+          - { label: "Instagram — link completo", name: "instagram_url", widget: "string" }
+          - { label: "Texto da seção 'Sobre'", name: "texto_sobre", widget: "text" }
+          - label: "Formas de envio"
+            name: "formas_de_envio"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Ativo (aparece no site)", name: "ativo", widget: "boolean", default: true }
+              - { label: "Observação", name: "obs", widget: "string" }
