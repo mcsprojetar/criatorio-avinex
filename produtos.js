@@ -1,0 +1,71 @@
+/* ============================================================
+   PRODUTOS — CRIATÓRIO AVINEX
+   Para adicionar um novo produto, copie um bloco { ... } e
+   preencha os campos. "preco: 0" mostra "Consulte o valor".
+   ============================================================ */
+
+const PRODUTOS = [
+  {
+    id: "ovos-codorna-chinesa",
+    nome: "Ovos Férteis de Codorna Chinesa",
+    categoria: "Ovos Férteis",
+    preco: 0, // defina o preço por dúzia/unidade quando cadastrado
+    unidade: "dúzia",
+    imagem: "images/produtos/ovos-codorna-chinesa.jpg",
+    descricao:
+      "Ovos novos e selecionados, destinados à incubação, coletados e embalados com cuidado.",
+    disponivel: true
+  },
+  {
+    id: "codorna-chinesa-filhote",
+    nome: "Codorna Chinesa — Filhote",
+    categoria: "Codorna Chinesa",
+    preco: 0,
+    unidade: "unidade",
+    imagem: "images/produtos/codorna-chinesa-filhote.jpg",
+    descricao: "Filhotes de codorna chinesa. Disponibilidade sujeita a lote atual.",
+    disponivel: true
+  },
+  {
+    id: "codorna-chinesa-jovem",
+    nome: "Codorna Chinesa — Jovem",
+    categoria: "Codorna Chinesa",
+    preco: 0,
+    unidade: "unidade",
+    imagem: "images/produtos/codorna-chinesa-jovem.jpg",
+    descricao: "Aves jovens, em fase de desenvolvimento.",
+    disponivel: true
+  },
+  {
+    id: "codorna-chinesa-adulta",
+    nome: "Codorna Chinesa — Adulta",
+    categoria: "Codorna Chinesa",
+    preco: 0,
+    unidade: "unidade",
+    imagem: "images/produtos/codorna-chinesa-adulta.jpg",
+    descricao: "Aves adultas, selecionadas do plantel.",
+    disponivel: true
+  },
+  {
+    id: "codorna-chinesa-casal",
+    nome: "Codorna Chinesa — Casal",
+    categoria: "Codorna Chinesa",
+    preco: 0,
+    unidade: "casal",
+    imagem: "images/produtos/codorna-chinesa-casal.jpg",
+    descricao: "Casal selecionado, macho e fêmea.",
+    disponivel: true
+  }
+  // Adicione novas espécies/variedades aqui futuramente.
+];
+
+/* Retorna produto pelo id */
+function buscarProduto(id) {
+  return PRODUTOS.find((p) => p.id === id);
+}
+
+/* Formata preço em Real, ou "Consulte" se não cadastrado */
+function formatarPreco(preco) {
+  if (!preco || preco <= 0) return "Consulte o valor";
+  return preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
